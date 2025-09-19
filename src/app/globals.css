@@ -1,21 +1,28 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* CurryCreations Design System - Spice-Inspired Color Palette */
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
+  /* CurryCreations Brand Colors */
+  --turmeric-yellow: 45 85% 55%; /* #F3C622 */
+  --paprika-red: 353 65% 58%; /* #D64550 */
+  --curry-green: 93 27% 38%; /* #4F7942 */
+  --cream-bg: 46 57% 94%; /* #F9F5E7 */
+  --warm-orange: 25 85% 60%; /* #E07B39 - from design reference */
+
+  /* Updated color system with CurryCreations palette */
+  --background: var(--cream-bg);
+  --foreground: 30 12% 20%;
 
   --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
+  --card-foreground: 30 12% 20%;
 
   --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
+  --popover-foreground: 30 12% 20%;
 
-  --primary: 222.2 47.4% 11.2%;
-  --primary-foreground: 210 40% 98%;
+  --primary: var(--warm-orange);
+  --primary-foreground: 0 0% 100%;
 
   --secondary: 210 40% 96.1%;
   --secondary-foreground: 222.2 47.4% 11.2%;
@@ -160,4 +167,25 @@ All colors MUST be HSL.
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
+  font-family: 'Open Sans', sans-serif;
 }
+
+/* CurryCreations Typography */
+.font-merriweather {
+  font-family: 'Merriweather', serif;
+}
+
+.font-open-sans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* CurryCreations specific styles */
+.curry-gradient {
+  background: linear-gradient(135deg, hsl(var(--warm-orange)) 0%, hsl(var(--paprika-red)) 100%);
+}
+
+.spice-level-1 { color: hsl(var(--curry-green)); }
+.spice-level-2 { color: hsl(var(--turmeric-yellow)); }
+.spice-level-3 { color: hsl(var(--warm-orange)); }
+.spice-level-4 { color: hsl(var(--paprika-red)); }
+.spice-level-5 { color: hsl(353 80% 45%); }
